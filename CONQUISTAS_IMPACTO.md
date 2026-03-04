@@ -50,7 +50,7 @@ Python | Pandas | Scikit-Learn | XGBoost | Feature Engineering
 - ✅ Validação de integridade
 - ✅ Cálculo de KPIs em tempo real
 - ✅ Alertas automáticos
-- ✅ Relatórios generateados
+- ✅ Relatórios gerados
 
 **Tecnologias:**
 ```
@@ -250,7 +250,7 @@ Não apenas features óbvias. Criação de features como:
 ### 🏅 Nível de Complexidade:
 **Intermediário-Avançado**
 - Requer conhecimento sólido de Python
-- Familiariadsade com ML/Data Science
+- Familiaridade com ML/Data Science
 - Entendimento de processos de negócio
 - Não é "copy-paste projects"
 
@@ -297,7 +297,7 @@ Não apenas features óbvias. Criação de features como:
 **88% Acurácia em ML**
 **80% Redução de trabalho manual**
 **5+ análises estratégicas**
-**Seguran�a Garantida 🔒**
+**Segurança Garantida 🔒**
 
 **Não é portfólio, é TRACK RECORD**
 
