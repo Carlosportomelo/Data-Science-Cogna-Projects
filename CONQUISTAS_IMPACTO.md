@@ -297,7 +297,7 @@ Não apenas features óbvias. Criação de features como:
 **88% Acurácia em ML**
 **80% Redução de trabalho manual**
 **5+ análises estratégicas**
-**LGPD Compliant 🔒**
+**Seguran�a Garantida 🔒**
 
 **Não é portfólio, é TRACK RECORD**
 
