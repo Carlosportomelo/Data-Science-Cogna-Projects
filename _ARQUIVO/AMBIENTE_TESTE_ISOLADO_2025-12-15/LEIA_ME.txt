@@ -1,0 +1,52 @@
+
+=========================================================
+AMBIENTE DE TESTE ISOLADO - LEAD SCORING (IA)
+Data de Geração: 2025-12-15
+=========================================================
+
+ESTRUTURA DE PASTAS:
+/Scripts  -> Contém os códigos Python (O Cérebro)
+/Data     -> Onde os dados de entrada devem ser colocados:
+             - 'base_teste.csv': Arquivo novo/desconhecido para o modelo classificar.
+/Outputs  -> Onde os relatórios Excel serão gerados
+/models   -> Onde o arquivo de inteligência fica salvo (.pkl)
+
+---------------------------------------------------------
+REQUISITOS DE EXPORTAÇÃO (HUBSPOT):
+---------------------------------------------------------
+O arquivo 'hubspot_leads.csv' PRECISA ter estas colunas visíveis na exportação:
+(Apenas se for retreinar o modelo no futuro. Para teste, basta o base_teste.csv)
+
+---------------------------------------------------------
+COMO USAR:
+---------------------------------------------------------
+
+1. PROVA DE FOGO (TESTE DOS GESTORES) - **PRIORIDADE**:
+   - O modelo aprovado (.pkl) JÁ FOI COPIADO para a pasta /models.
+   - Coloque APENAS o arquivo 'base_teste.csv' na pasta /Data.
+   - Execute: Clique duas vezes no arquivo 'EXECUTAR_TESTE.bat'
+   - O resultado sairá na pasta /Outputs.
+
+---------------------------------------------------------
+GUIA DE INTERPRETAÇÃO DOS RESULTADOS:
+---------------------------------------------------------
+
+1. NOTA 4 ou 5 (ALTA) + MATRICULADO:
+   ✅ SUCESSO: O modelo identificou o padrão de compra corretamente.
+
+2. NOTA 1 ou 2 (BAIXA) + PERDIDO:
+   🛡️ EFICIÊNCIA: O modelo identificou que o lead não valia o esforço (economia de tempo).
+
+3. NOTA 4 ou 5 (ALTA) + PERDIDO (O "Falso Positivo"):
+   ⚠️ OPORTUNIDADE: Isso indica um "Lead Qualificado com Objeção Final".
+   - O lead teve alto engajamento (muitas atividades) e perfil ideal.
+   - Motivo provável da perda: Preço, Crédito Reprovado ou Concorrência.
+   - AÇÃO RECOMENDADA: Prioridade máxima para campanhas de REPESCAGEM.
+
+---------------------------------------------------------
+CONCLUSÃO E MIGRAÇÃO:
+---------------------------------------------------------
+✅ METODOLOGIA VALIDADA.
+Para levar os arquivos aprovados de volta ao projeto original:
+1. Execute: python Scripts/5.Empacotar_Producao.py
+2. Copie a pasta gerada 'Entrega_Final_Producao'.

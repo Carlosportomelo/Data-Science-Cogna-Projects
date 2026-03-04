@@ -1,0 +1,96 @@
+================================================================================
+DASHBOARD DE ACOMPANHAMENTO - HELIO (PRE vs POS-LANCAMENTO)
+================================================================================
+Data de Lancamento do Helio: 20/01/2026
+Dias desde o lancamento: 1
+
+[1/5] Carregando os 3 marcos historicos...
+
+  >> Carregando: 12/12/2025 - Baseline Organico 1
+     - Lendo: Lead_Scoring_Digital_Busca_2025-12-12.xlsx
+        [OK] 2_Top500_Nota5: 315 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 702 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Direto_2025-12-12.xlsx
+        [OK] 2_Top500_Nota5: 26 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 645 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Social_2025-12-12.xlsx
+        [OK] 2_Top500_Nota5: 16 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 713 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Offline_2025-12-12.xlsx
+        [OK] 2_Top500_Nota5: 461 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 709 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     [OK] Total consolidado: 5714 leads unicos
+
+  >> Carregando: 05/01/2026 - Baseline Organico 2
+     - Lendo: Lead_Scoring_Digital_Busca_2026-01-05.xlsx
+        [OK] 2_Top500_Nota5: 389 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 703 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Direto_2026-01-05.xlsx
+        [OK] 2_Top500_Nota5: 154 leads
+        [OK] 3_Nota4: 312 leads
+        [OK] 4_Top10_Por_Unidade: 645 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Social_2026-01-05.xlsx
+        [OK] 2_Top500_Nota5: 500 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 712 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Offline_2026-01-05.xlsx
+        [OK] 2_Top500_Nota5: 500 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 709 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     [OK] Total consolidado: 5418 leads unicos
+
+  >> Carregando: 20/01/2026 - LANCAMENTO DO HELIO
+     - Lendo: Lead_Scoring_Digital_Busca_2026-01-20.xlsx
+        [OK] 2_Top500_Nota5: 78 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 696 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Direto_2026-01-20.xlsx
+        [OK] 2_Top500_Nota5: 11 leads
+        [OK] 3_Nota4: 225 leads
+        [OK] 4_Top10_Por_Unidade: 654 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Digital_Social_2026-01-20.xlsx
+        [OK] 2_Top500_Nota5: 4 leads
+        [OK] 3_Nota4: 357 leads
+        [OK] 4_Top10_Por_Unidade: 710 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     - Lendo: Lead_Scoring_Offline_2026-01-20.xlsx
+        [OK] 2_Top500_Nota5: 500 leads
+        [OK] 3_Nota4: 500 leads
+        [OK] 4_Top10_Por_Unidade: 709 leads
+        [OK] 5_Em_Qualificacao: 1000 leads
+     [OK] Total consolidado: 6191 leads unicos
+
+[2/5] Carregando situacao atual do HubSpot...
+  [OK] 105631 leads atuais carregados
+
+[3/5] Consolidando marcos (cada lead aparece 1 vez no marco original)...
+  - 12/12/2025 - Baseline Organico 1: 5714 leads NOVOS (de 5714 total)
+  - 05/01/2026 - Baseline Organico 2: 2439 leads NOVOS (de 5418 total)
+  - 20/01/2026 - LANCAMENTO DO HELIO: 2217 leads NOVOS (de 6191 total)
+  [OK] 10370 leads unicos consolidados (sem duplicatas, por nome)
+
+[4/5] Cruzando com situacao atual e criando metricas de acompanhamento...
+  - Fazendo match por Nome do Negocio (chave primaria)...
+  - Leads com match por nome: 43408
+  - Total de leads apos merge: 43544
+
+  >> DEBUG - Colunas disponiveis apos merge:
+  - Colunas totais: 42
+  - Todas as colunas: ['Nome_Negocio', 'Etapa do negócio', 'Unidade_Desejada', 'Fonte original do tráfego', 'Fonte_Cat', 'Segmento_ML', 'Faixa_Atividade', 'Número de atividades de vendas', 'Data_Criacao', 'Dias_Desde_Criacao', 'Proprietário do negócio', 'Probabilidade_Conversao', 'Nota_1a5', 'Prioridade_Atendimento', 'Marco_ID', 'Data_Marco', 'Descricao_Marco', 'Periodo', 'Dias_Apos_Lancamento_Marco', 'Nome_Chave', 'Tipo_Unidade', 'Detalhamento da fonte original do tráfego 1', 'Detalhamento da fonte original do tráfego 2', 'Data de fechamento', 'Pipeline', 'Valor na moeda da empresa', 'Motivo_Perda', 'In_Lost_Base', 'Ano', 'Mes', 'DiaSemana', 'Trimestre', 'Densidade_Atividade', 'Detalhe_Offline', 'Etapa_Class', 'Fonte_Cat_enc', 'Detalhe_Offline_enc', 'Unidade Desejada_enc', 'Faixa_Atividade_enc', 'Data_Criacao_Lead', 'Data_Ultima_Atividade', 'Record ID']
+
+  >> DIAGNOSTICO DE MERGE (por Nome do Negocio):

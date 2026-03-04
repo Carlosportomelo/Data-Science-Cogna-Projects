@@ -1,0 +1,84 @@
+# ============================================
+# SEGURANÇA LGPD - NÃO SUBIR DADOS PESSOAIS
+# ============================================
+
+# Dados em CSV/Excel
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.db
+*.sqlite
+*.mdb
+
+# Pastas com dados
+Data/
+data/
+outputs/
+Outputs/
+Output/
+output/
+_DADOS_*/
+_BACKUP_*/
+datasets/
+raw_data/
+
+# Credenciais e configurações sensíveis
+.env
+.env.local
+.env.*.local
+config.local.py
+secrets.py
+credentials/
+keys/
+tokens.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.history/
+
+# Git
+.git/
+.gitconfig
+
+# Backup e temporários
+*.bak
+*.tmp
+*~
+~$*
+.claude/

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saber Idiomas - Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        
+        @keyframes like-burst {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.3); }
+            50% { transform: scale(0.95); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float-up {
+            0% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(-80px) scale(1.5); }
+        }
+        
+        @keyframes heart-float {
+            0% { opacity: 1; transform: scale(0) translateY(0); }
+            50% { opacity: 1; transform: scale(1.2) translateY(-20px); }
+            100% { opacity: 0; transform: scale(1) translateY(-60px); }
+        }
+        
+        .like-animation { animation: like-burst 0.4s ease-out; }
+        .float-balloon { animation: float-up 0.8s ease-out forwards; }
+        .double-tap-heart { animation: heart-float 0.8s ease-out forwards; }
+        
+        .story-ring {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            padding: 2px;
+        }
+        
+        .post-image { 
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-black text-white min-h-screen">
+    
+    <!-- App Container -->
+    <div class="max-w-lg mx-auto bg-black min-h-screen relative">
+        
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-black border-b border-zinc-800 px-4 py-3 flex items-center justify-between">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            
+            <h1 class="text-xl font-semibold tracking-tight">
+                <span class="text-green-500">Saber Idiomas</span>
+            </h1>
+            
+            <div class="flex gap-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                </svg>
+            </div>
+        </header>
+
+        <!-- Stories -->
+        <div class="flex gap-4 p-4 overflow-x-auto border-b border-zinc-800">
+            <!-- Seu story -->
+            <div class="flex flex-col items-center gap-1 flex-shrink-0">
+                <div class="w-16 h-16 rounded-full bg-zinc-800 flex items-center justify-center relative">
+                    <img src="https://ui-avatars.com/api/?name=Você&background=ef4444&color=fff&size=64" class="w-14 h-14 rounded-full">
+                    <div class="absolute bottom-0 right-0 w-5 h-5 bg-blue-500 rounded-full border-2 border-black flex items-center justify-center">
+                        <span class="text-xs font-bold">+</span>
+                    </div>
+                </div>
+                <span class="text-xs text-zinc-400">Seu story</span>
+            </div>
+            
+            <!-- Stories de outros -->
+            <div class="flex flex-col items-center gap-1 flex-shrink-0">
+                <div class="story-ring rounded-full">
+                    <div class="bg-black p-0.5 rounded-full">
+                        <img src="https://ui-avatars.com/api/?name=RB&background=dc2626&color=fff&size=64" class="w-14 h-14 rounded-full">
+                    </div>
+                </div>
+                <span class="text-xs">redballoon</span>
+            </div>
+            
+            <div class="flex flex-col items-center gap-1 flex-shrink-0">
+                <div class="story-ring rounded-full">
+                    <div class="bg-black p-0.5 rounded-full">
+                        <img src="https://ui-avatars.com/api/?name=EN&background=3b82f6&color=fff&size=64" class="w-14 h-14 rounded-full">
+                    </div>
+                </div>
+                <span class="text-xs">english_fun</span>
+            </div>
+            
+            <div class="flex flex-col items-center gap-1 flex-shrink-0">
+                <div class="story-ring rounded-full">
+                    <div class="bg-black p-0.5 rounded-full">
+                        <img src="https://ui-avatars.com/api/?name=KD&background=8b5cf6&color=fff&size=64" class="w-14 h-14 rounded-full">
+                    </div>
+                </div>
+                <span class="text-xs">kids_learn</span>
+            </div>
+            
+            <div class="flex flex-col items-center gap-1 flex-shrink-0">
+                <div class="story-ring rounded-full">
+                    <div class="bg-black p-0.5 rounded-full">
+                        <img src="https://ui-avatars.com/api/?name=CB&background=10b981&color=fff&size=64" class="w-14 h-14 rounded-full">
+                    </div>
+                </div>
+                <span class="text-xs">cambridge</span>
+            </div>
+        </div>
+
+        <!-- Feed -->
+        <div id="feed" class="pb-20">
+            <!-- Posts serão inseridos aqui via JS -->
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="fixed bottom-0 left-0 right-0 max-w-lg mx-auto bg-black border-t border-zinc-800 px-6 py-3 flex justify-between items-center">
+            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+            </svg>
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            </svg>
+            <img src="https://ui-avatars.com/api/?name=Você&background=ef4444&color=fff&size=28" class="w-7 h-7 rounded-full border border-white">
+        </nav>
+    </div>
+
+    <script>
+        // Dados dos posts
+        const posts = [
+            {
+                id: 1,
+                username: 'bilingual_school',
+                avatar: 'https://ui-avatars.com/api/?name=BS&background=7c3aed&color=fff&size=64',
+                verified: true,
+                location: 'Unidade Jardins',
+                image: './Posts/3.png',
+                likes: 2103,
+                liked: false,
+                saved: false,
+                caption: 'Todo time tem um xodó e o nosso é o Bilingual School <br>Cuidado extremo, presença constante e zero chance de deixar cair, nosso legítimo bebê reborn de 2025. 👶✨<br> Levamos esse “bebê” pra passear, apresentar pro mercado e… resultado real: Meta de matrículas batida na unidade Jardins. Quem disse que Marketing com carinho não entrega KPI? <br>#BilingualSchool #BebêRebornDoMarketing #LançamentoDeProduto #Captação2025 #MarketingEducacional #MetaBatida #BrandLove',
+                comments: 156,
+                time: '2h'
+            },
+            {
+                id: 2,
+                username: 'summit_b2c',
+                avatar: 'https://ui-avatars.com/api/?name=B2&background=db2777&color=fff&size=64',
+                verified: false,
+                location: 'Summit B2C',
+                image: './Posts/4.png',
+                likes: 1542,
+                liked: false,
+                saved: false,
+                caption: 'Marketing também gosta de estética.<br> E de impacto.<br> E, claro… de um bom morango do amor. 🍓<br>O Summit B2C foi exatamente isso: Por fora, brilho, festa e experiência.<br> Por dentro, estratégia, suor e uma calda no ponto certo pra não quebrar o dente.<br>Alta captação, franqueado engajado e campanha que deu gosto de ver.<br>#SummitB2C #MorangoDoAmor #MarketingDeEventos #ExperiênciaDeMarca #AltaCaptação #EngajamentoReal #MarketingQueEncanta',
+                comments: 67,
+                time: '4h'
+            },
+            {
+                id: 3,
+                username: 'redballoon_panco',
+                avatar: 'https://ui-avatars.com/api/?name=RP&background=eab308&color=fff&size=64',
+                verified: true,
+                location: 'Halloween',
+                image: './Posts/5.png',
+                likes: 3201,
+                liked: false,
+                saved: false,
+                caption: '“Isso é real ou é IA?” A pergunta mais feita da internet em 2025. 🤖🎃No nosso Halloween, a resposta foi clara: Não era IA!!!! Era Inteligência Humana em estado avançado.<br>Primeira grande collab com a Panco, criatividade afiada e feeling que nenhum algoritmo replica. Desculpa, IA… essa foi toda nossa.<br> #SeráQueÉIA #Halloween2025 #MarketingCriativo #CollabDeMarca #ConteúdoAutêntico #InteligênciaHumana #BrandCollab',
+                comments: 210,
+                time: '6h'
+            },
+            {
+                id: 4,
+                username: 'summit_b2b',
+                avatar: 'https://ui-avatars.com/api/?name=SB&background=2563eb&color=fff&size=64',
+                verified: true,
+                location: 'Skies Learning',
+                image: './Posts/6.png',
+                likes: 945,
+                liked: false,
+                saved: false,
+                caption: 'Teve viral que saiu da internet e invadiu a vida real: Os Labubus. 🧸<br>E sabe o que também virou item de desejo? O Summit B2B.<br>A Skies Learning é aquele Labubu raro: todo mundo quer, poucos têm, e quando aparece… chama atenção.<br> #SummitB2B #SkiesLearning #LabubuDoMarketing #MarcaDesejada #MarketingB2B #BrandExperience #EventoEstratégico',
+                comments: 55,
+                time: '8h'
+            },
+            {
+                id: 5,
+                username: 'skies_day',
+                avatar: 'https://ui-avatars.com/api/?name=SD&background=10b981&color=fff&size=64',
+                verified: true,
+                location: 'Goiânia',
+                image: './Posts/7.png',
+                likes: 1890,
+                liked: false,
+                saved: false,
+                caption: 'Pistache e Skies Days: a tendência que não passa fácil. 💚<br> Cinco edições em 2025, feedbacks positivos e até edição internacional (sim, Goiânia virou global).<br>Um evento com gosto novo, mas já com cara de clássico.<br> #SkiesDay #FebreDoPistache #EventoDeMarca #MarketingEducacional #ExperiênciaQueFica #BrandLove #Marketing2025',
+                comments: 123,
+                time: '10h'
+            },
+            {
+                id: 6,
+                username: 'wings_cast',
+                avatar: 'https://ui-avatars.com/api/?name=WC&background=22c55e&color=fff&size=64',
+                verified: true,
+                location: 'No Ar',
+                image: './Posts/9.png',
+                likes: 450,
+                liked: false,
+                saved: false,
+                caption: 'Em 2025, o Brasil parou pra assistir Vale Tudo. 📺<br> Por aqui, a gente também teve nosso líder de audiência.<br>O Wings Cast saiu do papel , passou por dias intensos de gravação, começou nos bastidores em 2024 e teve sua grande estreia em 2025, direto da Bett Brasil.<br> Teve emoção, audiência, engajamento e sucesso. Todos confirmados no ibope do marketing.<br>Agora a pergunta que não quer calar… quando estreia a próxima temporada?<br> #WingsCast #ValeTudo #ConteúdoQueEngaja #PodcastDeMarca #MarketingEducacional #BrandContent #LíderDeAudiência #Marketing2025',
+                comments: 28,
+                time: '12h'
+            },
+            {
+                id: 7,
+                username: 'bett_brasil',
+                avatar: 'https://ui-avatars.com/api/?name=BB&background=059669&color=fff&size=64',
+                verified: true,
+                location: 'Bett Brasil',
+                image: './Posts/8.png',
+                likes: 2456,
+                liked: false,
+                saved: false,
+                caption: 'Nosso momento Oscar. 🎬🏆<br>Na Bett Brasil 2025, a Saber idiomas não foi só pra marcar presença, foi pra ser lembrada, comentada e… contratada.<br>Estreia da Expansão, ecossistema completo em cena, podcast ao vivo, ativações nonstop e conteúdo em tempo real.<br> O resultado? “Ainda estamos aqui… e maiores do que nunca.”<br> #BettBrasil #RedBalloon #AindaEstouAqui #MarketingDeFeira #Expansão #BrandingEducacional #ConteúdoAoVivo',
+                comments: 178,
+                time: '1d'
+            },
+            {
+                id: 8,
+                username: 'saber_team',
+                avatar: 'https://ui-avatars.com/api/?name=ST&background=f43f5e&color=fff&size=64',
+                verified: true,
+                location: 'Marketing Team',
+                image: './Posts/2.png',
+                likes: 1100,
+                liked: false,
+                saved: false,
+                caption: 'O estilo Bobbie Goods ensina uma coisa essencial: o todo só funciona porque cada detalhe importa! <br>E nosso time é edição limitada, com peças diferentes, talentos complementares e uma cultura que não se vende separadamente.<br>O algoritmo muda, a trend passa… mas time alinhado entrega qualquer demanda! E com as contratações desse ano passamos a ser uma coleção completa. 🎈<br> #TimeDeMarketing #CulturaForte #BobbieGoodsVibes #MarketingComPropósito #EdiçãoLimitada #TimeQueEntrega #Retrospectiva2025',
+                comments: 92,
+                time: '1d'
+            },
+            {
+                id: 9,
+                username: 'christmas_summit',
+                avatar: 'https://ui-avatars.com/api/?name=CS&background=dc2626&color=fff&size=64',
+                verified: true,
+                location: 'Merry Christmas',
+                image: './Posts/10.png',
+                likes: 1340,
+                liked: false,
+                saved: false,
+                caption: 'Merry Christmas Summit! 🎄🎨 O clima de Natal tomou conta e nossa equipe virou arte! Um momento para colorir, celebrar as conquistas e recarregar as energias. Inglês para voar alto até no Papai Noel! #MerryChristmas #Summit #RedBalloon #Team #Coloring',
+                comments: 45,
+                time: '2d'
+            },
+            {
+                id: 10,
+                username: 'saber_goods',
+                avatar: 'https://ui-avatars.com/api/?name=SG&background=2563eb&color=fff&size=64',
+                verified: true,
+                location: 'Times de Sucesso',
+                image: './Posts/11.png',
+                likes: 1620,
+                liked: false,
+                saved: false,
+                caption: 'Saber Goods: Edição Times de Sucesso! 🎁📱 Escaneie o QR Code e descubra o que preparamos para 2025. Conexões que geram resultados e brindes que todo mundo quer! #SaberGoods #TimesDeSucesso #QRCode #Novidades #AnoNovo',
+                comments: 68,
+                time: '2d'
+            }
+        ];
+
+        // Gera SVG do balão
+        function generateBalloonSVG(size, liked) {
+            const color = '#FF4444';
+            return `
+                <svg width="${size}" height="${size}" viewBox="0 0 100 100" fill="none" class="transition-all duration-200">
+                    <circle
+                        cx="50" cy="45" r="38"
+                        fill="${liked ? color : 'none'}"
+                        stroke="${liked ? 'none' : color}"
+                        stroke-width="2.5"
+                    />
+                    ${liked ? `
+                    <ellipse
+                        cx="35" cy="25" rx="10" ry="13"
+                        fill="rgba(255, 255, 255, 0.35)"
+                    />` : ''}
+                    <circle cx="50" cy="82" r="3" fill="${color}" />
+                </svg>
+            `;
+        }
+
+        // Gera HTML do post
+        function generatePost(post) {
+            return `
+                <article class="border-b border-zinc-800" data-post-id="${post.id}">
+                    <!-- Header -->
+                    <div class="flex items-center justify-between p-3">
+                        <div class="flex items-center gap-3">
+                            <div class="story-ring rounded-full p-0.5">
+                                <img src="${post.avatar}" class="w-8 h-8 rounded-full">
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-1">
+                                    <span class="font-semibold text-sm">${post.username}</span>
+                                    ${post.verified ? `
+                                    <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                                    </svg>` : ''}
+                                </div>
+                                <span class="text-xs text-zinc-500">${post.location}</span>
+                            </div>
+                        </div>
+                        <button class="p-2" aria-label="Mais opções">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="5" r="2"/>
+                                <circle cx="12" cy="12" r="2"/>
+                                <circle cx="12" cy="19" r="2"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="post-image relative overflow-hidden" onclick="handleDoubleTap(event, ${post.id})">
+                        <img src="${post.image}" class="w-full h-auto" alt="Post">
+                        <div id="double-tap-${post.id}" class="absolute inset-0 flex items-center justify-center pointer-events-none"></div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex items-center justify-between p-3">
+                        <div class="flex items-center gap-4">
+                            <button onclick="toggleLike(${post.id})" class="like-btn" id="like-btn-${post.id}" aria-label="Curtir">
+                                ${generateBalloonSVG(28, post.liked)}
+                            </button>
+                            <button aria-label="Comentar">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                </svg>
+                            </button>
+                            <button aria-label="Compartilhar">
+                                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <button onclick="toggleSave(${post.id})" id="save-btn-${post.id}" aria-label="Salvar">
+                            <svg class="w-7 h-7" fill="${post.saved ? 'white' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Likes -->
+                    <div class="px-3 pb-1">
+                        <span class="font-semibold text-sm" id="likes-${post.id}">${post.likes.toLocaleString()} curtidas</span>
+                    </div>
+
+                    <!-- Caption -->
+                    <div class="px-3 pb-2">
+                        <span class="font-semibold text-sm">${post.username}</span>
+                        <span class="text-sm"> ${post.caption}</span>
+                    </div>
+
+                    <!-- Comments -->
+                    <div class="px-3 pb-2">
+                        <button class="text-zinc-500 text-sm">Ver todos os ${post.comments} comentários</button>
+                    </div>
+
+                    <!-- Time -->
+                    <div class="px-3 pb-3">
+                        <span class="text-xs text-zinc-500 uppercase">${post.time}</span>
+                    </div>
+                </article>
+            `;
+        }
+
+        // Renderiza feed
+        function renderFeed() {
+            document.getElementById('feed').innerHTML = posts.map(generatePost).join('');
+        }
+
+        // Toggle like
+        function toggleLike(postId) {
+            const post = posts.find(p => p.id === postId);
+            post.liked = !post.liked;
+            post.likes += post.liked ? 1 : -1;
+
+            const btn = document.getElementById(`like-btn-${postId}`);
+            btn.innerHTML = generateBalloonSVG(28, post.liked);
+            
+            if (post.liked) {
+                btn.classList.add('like-animation');
+                setTimeout(() => btn.classList.remove('like-animation'), 400);
+                
+                // Cria balões flutuando
+                createFloatingBalloons(btn);
+            }
+
+            document.getElementById(`likes-${postId}`).textContent = `${post.likes.toLocaleString()} curtidas`;
+        }
+
+        // Cria balões flutuando na animação
+        function createFloatingBalloons(element) {
+            const rect = element.getBoundingClientRect();
+            for (let i = 0; i < 3; i++) {
+                setTimeout(() => {
+                    const balloon = document.createElement('div');
+                    balloon.innerHTML = generateBalloonSVG(20, true);
+                    balloon.className = 'fixed pointer-events-none float-balloon';
+                    balloon.style.left = `${rect.left + Math.random() * 20 - 10}px`;
+                    balloon.style.top = `${rect.top}px`;
+                    balloon.style.zIndex = '100';
+                    document.body.appendChild(balloon);
+                    setTimeout(() => balloon.remove(), 800);
+                }, i * 100);
+            }
+        }
+
+        // Double tap para curtir
+        let lastTap = 0;
+        function handleDoubleTap(event, postId) {
+            const now = Date.now();
+            if (now - lastTap < 300) {
+                const post = posts.find(p => p.id === postId);
+                if (!post.liked) {
+                    toggleLike(postId);
+                }
+                
+                // Mostra balão grande no centro
+                const container = document.getElementById(`double-tap-${postId}`);
+                container.innerHTML = `
+                    <div class="double-tap-heart">
+                        ${generateBalloonSVG(120, true)}
+                    </div>
+                `;
+                setTimeout(() => container.innerHTML = '', 800);
+            }
+            lastTap = now;
+        }
+
+        // Toggle save
+        function toggleSave(postId) {
+            const post = posts.find(p => p.id === postId);
+            post.saved = !post.saved;
+            
+            const btn = document.getElementById(`save-btn-${postId}`);
+            btn.innerHTML = `
+                <svg class="w-7 h-7" fill="${post.saved ? 'white' : 'none'}" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                </svg>
+            `;
+        }
+
+        // Init
+        renderFeed();
+    </script>
+</body>
+</html>

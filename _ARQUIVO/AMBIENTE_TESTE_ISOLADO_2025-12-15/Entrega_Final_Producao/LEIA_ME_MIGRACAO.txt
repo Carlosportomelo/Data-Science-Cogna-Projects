@@ -1,0 +1,11 @@
+PACOTE DE MIGRAÇÃO - LEAD SCORING
+Data de Validação: 2026-01-12
+Status: APROVADO EM TESTE CEGO
+=========================================================
+
+1. lead_scoring_model.pkl:
+   Substitua o arquivo antigo na pasta 'models' do projeto original.
+
+2. pipeline_scoring_validado.py:
+   Este código contém a lógica validada (Blindagem + Explicabilidade).
+   Use-o para atualizar seu script de produção.
