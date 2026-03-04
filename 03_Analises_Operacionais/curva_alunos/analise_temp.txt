@@ -1,0 +1,21 @@
+COLUNAS:
+0: 'Ciclo 26.1'
+1: 'Unnamed: 1'
+2: 'Alunado 2026 Novo\n(acumulado)'
+3: 'Alunado 2026 Novo\n(diário)'
+4: 'META MÓVEL NOVO'
+5: 'Dif. Meta móvel'
+6: 'Diferença Meta Móvel'
+7: 'Δ Novos (YoY)'
+8: 'Alunado 2025 Novo\n(acumulado)'
+9: 'Alunado 2025 Novo\n(diário)'
+10: 'Ciclo 25.1'
+11: 'Unnamed: 11'
+
+PRIMEIRAS 5 LINHAS:
+  Ciclo 26.1     Unnamed: 1  Alunado 2026 Novo\n(acumulado)  Alunado 2026 Novo\n(diário)  META MÓVEL NOVO  Dif. Meta móvel  Diferença Meta Móvel  Δ Novos (YoY)  Alunado 2025 Novo\n(acumulado)  Alunado 2025 Novo\n(diário) Ciclo 25.1    Unnamed: 11
+0 2025-10-01   quarta-feira                             1.0                            1                0                1                   NaN              1                               0                            0 2024-10-01    terça-feira
+1 2025-10-02   quinta-feira                             1.0                            1                3               -2             -0.666667             -2                               3                            3 2024-10-02   quarta-feira
+2 2025-10-03    sexta-feira                             6.0                            5                8               -2             -0.250000             -1                               7                            4 2024-10-03   quinta-feira
+3 2025-10-06  segunda-feira                             8.0                            2               22              -14             -0.636364            -12                              20                           13 2024-10-04    sexta-feira
+4 2025-10-07    terça-feira                            13.0                            5               30              -17             -0.566667            -14                              27                            7 2024-10-07  segunda-feira
