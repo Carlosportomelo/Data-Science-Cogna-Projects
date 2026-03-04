@@ -6,7 +6,7 @@
 
 ## 📁 Projetos Inclusos
 
-### 1️⃣ **01_Helio_ML_Producao** - Sistema de IA para Scoring de Leads
+### **01_Helio_ML_Producao** - Sistema de IA para Scoring de Leads
 **Objetivo**: Modelo de machine learning para priorização e previsão de conversão de leads
 
 **O que contém:**
@@ -36,7 +36,7 @@ python Scripts/main_processing.py --input sua_data.csv
 
 ---
 
-### 2️⃣ **02_Pipeline_Midia_Paga** - Automação e Análise de Performance
+### **02_Pipeline_Midia_Paga** - Automação e Análise de Performance
 **Objetivo**: ETL, validação e análise de gastos em mídia paga (Meta, Google Ads)
 
 **O que contém:**
@@ -67,7 +67,7 @@ EXECUTAR_PIPELINE.bat
 
 ---
 
-### 3️⃣ **03_Analises_Operacionais** - Análises de Negócio
+### **03_Analises_Operacionais** - Análises de Negócio
 **Objetivo**: Dashboards, análises de funil, eficiência de canais
 
 **Pastas:**
@@ -84,7 +84,7 @@ python scripts/gerar_dashboards.py
 
 ---
 
-### 4️⃣ **06_Analise_Funil_RedBalloon** - Análise de Conversão
+### **06_Analise_Funil_RedBalloon** - Análise de Conversão
 **Objetivo**: Análise detalhada do funil de vendas e conversão
 
 **O que faz:**
@@ -164,16 +164,16 @@ cada_projeto/
 ## 🚀 Quick Start (Escolha um):
 
 ```bash
-# Projeto 1: ML Scoring
+# 01_Helio_ML_Producao
 cd 01_Helio_ML_Producao && python Scripts/main.py
 
-# Projeto 2: Pipeline Mídia
+# 02_Pipeline_Midia_Paga
 cd 02_Pipeline_Midia_Paga && EXECUTAR_PIPELINE.bat
 
-# Projeto 3: Análises Op.
+# 03_Analises_Operacionais
 cd 03_Analises_Operacionais && python scripts/run_all.py
 
-# Projeto 6: Funil Analysis
+# 06_Analise_Funil_RedBalloon
 cd 06_Analise_Funil_RedBalloon && EXECUTAR_ANALISE.bat
 ```
 

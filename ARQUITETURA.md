@@ -110,7 +110,7 @@ Este portfólio demonstra expertise em **3 pilares interconectados**:
 
 ## 🏢 ESTRUTURA POR PROJETO
 
-### PROJETO 1: HELIO ML SCORING
+### HELIO ML SCORING
 ```
 01_HELIO_ML_SCORING/
 │
@@ -143,7 +143,7 @@ Este portfólio demonstra expertise em **3 pilares interconectados**:
 
 ---
 
-### PROJETO 2: PIPELINE MÍDIA PAGA
+### PIPELINE MÍDIA PAGA
 ```
 02_PIPELINE_MIDIA_PAGA/
 │
@@ -180,7 +180,7 @@ Este portfólio demonstra expertise em **3 pilares interconectados**:
 
 ---
 
-### PROJETO 3: ANÁLISES OPERACIONAIS
+### ANÁLISES OPERACIONAIS
 ```
 03_ANALISES_OPERACIONAIS/
 │
@@ -219,7 +219,7 @@ Este portfólio demonstra expertise em **3 pilares interconectados**:
 
 ---
 
-### PROJETO 4: FUNIL REDBALLOON
+### FUNIL REDBALLOON
 ```
 06_FUNIL_REDBALLOON/
 │

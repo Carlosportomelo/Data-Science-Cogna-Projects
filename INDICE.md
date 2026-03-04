@@ -32,7 +32,7 @@ portfolio-dados-ia/
 │   ├── gerar_requirements.py        ← Gera requirements.txt
 │   └── validar_seguranca_github.py  ← Verifica LGPD compliance
 │
-├── 📂 PROJETO 1: HELIO ML SCORING
+├── 📂 HELIO ML SCORING
 │   ├── README.md                    ← Como usar este projeto
 │   ├── Docs/
 │   │   ├── DATA_SCHEMA.md          ← Estrutura esperada dos dados
@@ -46,7 +46,7 @@ portfolio-dados-ia/
 │   ├── models/ (treinados + prontos)
 │   └── requirements.txt
 │
-├── 📂 PROJETO 2: PIPELINE MÍDIA PAGA
+├── 📂 PIPELINE MÍDIA PAGA
 │   ├── README.md
 │   ├── Docs/
 │   │   ├── API_INTEGRATION.md      ← Como integrar com APIs
@@ -61,7 +61,7 @@ portfolio-dados-ia/
 │   ├── EXECUTAR_PIPELINE.bat       ← Rodar tudo em 1 clique
 │   └── requirements.txt
 │
-├── 📂 PROJETO 3: ANÁLISES OPERACIONAIS
+├── 📂 ANÁLISES OPERACIONAIS
 │   ├── README.md
 │   ├── Docs/
 │   │   └── ANALISES_DISPONÍVEIS.md ← O que tem de analysis
@@ -81,7 +81,7 @@ portfolio-dados-ia/
 │       ├── README.md
 │       └── scripts/
 │
-├── 📂 PROJETO 4: FUNIL REDBALLOON
+├── 📂 FUNIL REDBALLOON
 │   ├── README.md
 │   ├── Docs/
 │   │   ├── FUNIL_MAPEAMENTO.md     ← Etapas do funil
@@ -172,7 +172,7 @@ python scripts/main.py  # Ou scripts específicos
 
 ### Execução Detalhada Por Projeto
 
-**Projeto 1 (ML):** [→ Ir para README](./01_HELIO_ML_SCORING/README.md)
+**HELIO ML SCORING:** [→ Ir para README](./01_HELIO_ML_SCORING/README.md)
 ```bash
 python scripts/01_load_data.py
 python scripts/02_feature_engineering.py
@@ -180,7 +180,7 @@ python scripts/03_train_model.py
 python scripts/04_predict.py --input seu_dado.csv
 ```
 
-**Projeto 2 (Pipeline):** [→ Ir para README](./02_PIPELINE_MIDIA_PAGA/README.md)
+**PIPELINE MÍDIA PAGA:** [→ Ir para README](./02_PIPELINE_MIDIA_PAGA/README.md)
 ```bash
 # Automático
 EXECUTAR_PIPELINE.bat
@@ -190,13 +190,13 @@ python scripts/fetch_meta_ads.py
 python scripts/calculate_kpis.py
 ```
 
-**Projeto 3 (Análises):** [→ Ir para README](./03_ANALISES_OPERACIONAIS/README.md)
+**ANÁLISES OPERACIONAIS:** [→ Ir para README](./03_ANALISES_OPERACIONAIS/README.md)
 ```bash
 cd eficiencia_canal
 python scripts/run_analysis.py
 ```
 
-**Projeto 4 (Funil):** [→ Ir para README](./06_FUNIL_REDBALLOON/README.md)
+**FUNIL REDBALLOON:** [→ Ir para README](./06_FUNIL_REDBALLOON/README.md)
 ```bash
 EXECUTAR_ANALISE.bat
 ```

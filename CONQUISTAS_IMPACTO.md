@@ -6,7 +6,7 @@
 
 ## 📊 Resultados Alcançados
 
-### 🎯 Projeto 1: HELIO ML SCORING
+### 🎯 HELIO ML SCORING
 **Status**: ✅ Em Produção
 
 | Métrica | Valor |
@@ -29,7 +29,7 @@ Python | Pandas | Scikit-Learn | XGBoost | Feature Engineering
 
 ---
 
-### 🔄 Projeto 2: PIPELINE MÍDIA PAGA
+### 🔄 PIPELINE MÍDIA PAGA
 **Status**: ✅ Em Produção | ✅ Automação 24/7
 
 | Métrica | Valor |
@@ -59,7 +59,7 @@ Python | APIs REST | Pandas | SQL | Validação de Dados
 
 ---
 
-### 📊 Projeto 3: ANÁLISES OPERACIONAIS
+### 📊 ANÁLISES OPERACIONAIS
 **Status**: ✅ Suportando decisões executivas
 
 | Métrica | Valor |
@@ -110,7 +110,7 @@ Python | Pandas | Data Visualization | Excel/Power BI | Estatística
 
 ---
 
-### 🎯 Projeto 4: FUNIL REDBALLOON
+### 🎯 FUNIL REDBALLOON
 **Status**: ✅ Análise Estratégica
 
 | Métrica | Valor |

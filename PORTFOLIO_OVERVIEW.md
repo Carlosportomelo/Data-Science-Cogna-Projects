@@ -103,11 +103,11 @@ cd portfolio-dados-ia
 Cada pasta tem seu próprio `README.md` com instruções específicas:
 
 ```bash
-# Projeto 1: ML Scoring
+# 01_HELIO_ML_SCORING
 cd 01_HELIO_ML_SCORING
 cat README.md
 
-# Projeto 2: Pipeline
+# 02_PIPELINE_MIDIA_PAGA
 cd ../02_PIPELINE_MIDIA_PAGA
 cat README.md
 
@@ -132,7 +132,7 @@ pip install -r requirements.txt
 
 ## 📂 DETALHES DE CADA PROJETO
 
-### 🎯 **Projeto 1: HELIO ML SCORING**
+### 🎯 **HELIO ML SCORING**
 `01_HELIO_ML_SCORING/`
 
 **O que é:**
@@ -158,7 +158,7 @@ python scripts/04_predict.py --input dados.csv
 
 ---
 
-### 🔄 **Projeto 2: PIPELINE MÍDIA PAGA**
+### 🔄 **PIPELINE MÍDIA PAGA**
 `02_PIPELINE_MIDIA_PAGA/`
 
 **O que é:**
@@ -192,7 +192,7 @@ python scripts/calculate_kpis.py
 
 ---
 
-### 📊 **Projeto 3: ANÁLISES OPERACIONAIS**
+### 📊 **ANÁLISES OPERACIONAIS**
 `03_ANALISES_OPERACIONAIS/`
 
 **O que é:**
@@ -218,7 +218,7 @@ Suporta decisões executivas com análises profundas e visuais atrativas.
 
 ---
 
-### 🎯 **Projeto 4: FUNIL REDBALLOON**
+### 🎯 **FUNIL REDBALLOON**
 `06_FUNIL_REDBALLOON/`
 
 **O que é:**
